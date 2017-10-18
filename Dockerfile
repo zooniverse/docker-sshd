@@ -1,7 +1,6 @@
 FROM alpine
 
-RUN apk --update add openssh && \
-    rm -rf /var/cache/apk/*
+RUN apk --no-cache add openssh
 
 RUN adduser -D -u 1001 docker
 RUN passwd -u docker
